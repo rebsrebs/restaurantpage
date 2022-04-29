@@ -50,6 +50,7 @@ body {
   font-size:42px;
   letter-spacing: 0.15em;
   margin-bottom:10px;
+  color:rgb(174, 221, 31)
 }
 
 .nav__list {
@@ -81,7 +82,7 @@ body {
 .sectionbox {
   display:flex;
   flex-direction:column;
-  border-color:red;
+  border-color:rgb(114, 232, 114);
   border-width:1px;
   border-style:solid;
   padding:30px;
@@ -142,7 +143,7 @@ h3 {
 
 .menusection {
   font-family:Monoton;
-  color:rgb(32, 32, 106);
+  color:rgb(230, 58, 181);
 }
 
 .menucategory {

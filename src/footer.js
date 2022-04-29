@@ -1,6 +1,7 @@
 function footer() {
   const footerbox = document.createElement('div');
   footerbox.classList.add('sectionbox');
+  footerbox.id = 'footerbox';
 
   const footergrid = document.createElement('div');
   footergrid.classList.add('footergrid');

@@ -1,6 +1,7 @@
 function menu() {
   const menubox = document.createElement('div');
   menubox.classList.add('sectionbox');
+  menubox.id = 'menubox';
 
     // SYMBOLS
     const veganv = document.createElement('p');

@@ -3,6 +3,7 @@ import Icon from './icon.png';
 function about() {
   const aboutbox = document.createElement('div');
   aboutbox.classList.add('sectionbox');
+  aboutbox.id = 'aboutbox';
 
   const paragraph = document.createElement('p');
 
