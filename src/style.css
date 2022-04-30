@@ -76,6 +76,12 @@ body {
   text-transform: uppercase;
 }
 
+.aboutp {
+  font-size:18px;
+  width:460px;
+  line-height:3ch;
+}
+
 
 .hello {
   color: red;
@@ -103,7 +109,7 @@ body {
 
 .menuitem {
   display:grid;
-  width:400px;
+  width:430px;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 3ch max-content 2ch;
   margin-bottom:40px;
@@ -170,7 +176,7 @@ li {
 .menukey {
   font-size:16px;
   align-self:flex-end;
-  border: var(--logo-color);
+  border-color:rgb(193, 218, 244);
   border-width: 1px;
   border-style:dashed;
   padding:5px;
