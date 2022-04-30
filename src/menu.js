@@ -4,23 +4,23 @@ function menu() {
   menubox.id = 'menubox';
 
   // SYMBOLS
-  const menusymbolsrow = document.createElement('div');
-  menusymbolsrow.classList.add('menusymbolsrow');
+  // vegan
   const veganv = document.createElement('p');
-  veganv.innerHTML = ('V ');
-  veganv.classList.add('menuitemsymbols','griditem');
+  veganv.textContent = ('V ');
+  veganv.classList.add('menuitemsymbols');
+  // gluten free
   const gf = document.createElement('p');
-  gf.innerHTML = ('GF ');
-  gf.classList.add('menuitemsymbols','griditem');
+  gf.textContent = ('GF ');
+  gf.classList.add('menuitemsymbols');
 
   // LUNCH
   const lunchheading = document.createElement('h2');
-  lunchheading.innerHTML = ('Lunch');
+  lunchheading.textContent = ('Lunch');
   lunchheading.classList.add('menusection');
 
   // SALADS
   const salads = document.createElement('h3');
-  salads.innerHTML = ('Salads');
+  salads.textContent = ('Salads');
   salads.classList.add('menucategory');
 
   // RADISH DIV
@@ -28,19 +28,26 @@ function menu() {
   radishsalad.classList.add('menuitem');
   // RADISH TITLE
   const radishtitle = document.createElement('p');
-  radishtitle.innerHTML = ('Radish Salad');
+  radishtitle.textContent = ('Radish Salad');
   radishtitle.classList.add('menuitemname','griditem');
   // RADISH DESCRIPTION
   const radishdescription = document.createElement('p');
-  radishdescription.innerHTML = ('Black Spanish radish, French radish, watermelon radish, pickled fennel, endive, sweet corn, miso-lime vinaigrette.');
+  radishdescription.textContent = ('Black Spanish radish, French radish, watermelon radish, pickled fennel, endive, sweet corn, miso-lime vinaigrette.');
   radishdescription.classList.add('menuitemdescription','griditem');
   // RADISH PRICE
   const radishprice = document.createElement('p');
-  radishprice.innerHTML = ('$9');
+  radishprice.textContent = ('$9');
   radishprice.classList.add('menuitemprice','griditem')
+  // RADISH SYMBOLS
+  const radishmenusymbolsrow = document.createElement('div');
+  radishmenusymbolsrow.classList.add('menusymbolsrow');
+
   radishsalad.appendChild(radishtitle);
   radishsalad.appendChild(radishdescription);
   radishsalad.appendChild(radishprice);
+  radishsalad.appendChild(radishmenusymbolsrow);
+  radishmenusymbolsrow.appendChild(veganv);
+  radishmenusymbolsrow.appendChild(gf);
 
   // PURPLE DIV
   const purplesalad = document.createElement('div');
@@ -57,9 +64,18 @@ function menu() {
   const purpleprice = document.createElement('p');
   purpleprice.innerHTML = ('$11');
   purpleprice.classList.add('menuitemprice','griditem')
+  // PURPLE SYMBOLS
+  const purplemenusymbolsrow = document.createElement('div');
+  purplemenusymbolsrow.classList.add('menusymbolsrow');
+  // PURPLEDOM
   purplesalad.appendChild(purpletitle);
   purplesalad.appendChild(purpledescription);
   purplesalad.appendChild(purpleprice);
+  purplesalad.appendChild(purplemenusymbolsrow);
+  let veganv2 = veganv.cloneNode(true);
+  let gf2 = gf.cloneNode(true);
+  purplemenusymbolsrow.appendChild(veganv2);
+  purplemenusymbolsrow.appendChild(gf2);
 
   // SANDWICHES
   const sandwiches = document.createElement('h3');
@@ -82,9 +98,17 @@ function menu() {
   const vegsandwichprice = document.createElement('p');
   vegsandwichprice.innerHTML = ('$9');
   vegsandwichprice.classList.add('menuitemprice','griditem')
+  // VEG SYMBOLS
+  const vegmenusymbolsrow = document.createElement('div');
+  vegmenusymbolsrow.classList.add('menusymbolsrow');
+
   vegsandwich.appendChild(vegsandwichtitle);
   vegsandwich.appendChild(vegsandwichdescription);
   vegsandwich.appendChild(vegsandwichprice);
+  vegsandwich.appendChild(vegmenusymbolsrow);
+  let veganv3 = veganv.cloneNode(true);
+  vegmenusymbolsrow.appendChild(veganv3);
+  
   
   // CHIP DIV
   const chipsandwich = document.createElement('div');
@@ -101,14 +125,29 @@ function menu() {
   const chipsandwichprice = document.createElement('p');
   chipsandwichprice.innerHTML = ('$10');
   chipsandwichprice.classList.add('menuitemprice','griditem')
+  // CHIP SYMBOLS
+  const chipmenusymbolsrow = document.createElement('div');
+  chipmenusymbolsrow.classList.add('menusymbolsrow');
 
   chipsandwich.appendChild(chipsandwichtitle);
-  chipsandwich.appendChild(veganv);
   chipsandwich.appendChild(chipsandwichdescription);
   chipsandwich.appendChild(chipsandwichprice);
-  chipsandwich.appendChild(menusymbolsrow);
-  menusymbolsrow.appendChild(veganv);
-  menusymbolsrow.appendChild(gf);
+  chipsandwich.appendChild(chipmenusymbolsrow);
+  let veganv4 = veganv.cloneNode(true);
+  chipmenusymbolsrow.appendChild(veganv4);
+
+  // MENU KEY
+  const menukey = document.createElement('div');
+  menukey.classList.add('menukey');
+  const keyrow1 = document.createElement('p');
+  keyrow1.classList.add('keyrow');
+  keyrow1.innerText = 'V = vegan';
+  const keyrow2 = document.createElement('p');
+  keyrow2.innerText = 'GF = gluten-free';
+  keyrow2.classList.add('keyrow');
+  menukey.appendChild(keyrow1);
+  menukey.appendChild(keyrow2);
+
   
   menubox.appendChild(lunchheading);
   menubox.appendChild(salads);
@@ -117,6 +156,7 @@ function menu() {
   menubox.appendChild(sandwiches);
   menubox.appendChild(vegsandwich);
   menubox.appendChild(chipsandwich);
+  menubox.appendChild(menukey);
 
   return menubox;
 }

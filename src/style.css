@@ -1,3 +1,10 @@
+:root {
+  --logo-color: rgb(174, 221, 31);
+  --section-box-border-color: rgb(114, 232, 114);
+  --menu-section-heading-color: rgb(230, 58, 181);
+  --highlight-color:rgb(246, 118, 27);
+}
+
 @font-face {
   font-family: 'MyFont';
   src: url('./fonts/my-font.woff2') format('woff2'),
@@ -99,6 +106,7 @@ body {
   width:400px;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 3ch max-content 2ch;
+  margin-bottom:40px;
 }
 
 .menuitemname {
@@ -124,10 +132,14 @@ body {
 }
 
 .menuitemsymbols {
-  grid-column: 1 / 3 ;
-  grid-row: 3 / 4;
   align-self:center;
   display:inline;
+  margin-right:3px;
+}
+
+.menusymbolsrow {
+  grid-column: 1 / 3 ;
+  grid-row: 3 / 4;
 }
 
 .griditem {
@@ -135,11 +147,11 @@ body {
 }
 
 h2 {
-  font-size:30px;
+  font-size:33px;
 }
 
 h3 {
-  font-size:25px;
+  font-size:26px;
 }
 
 li {
@@ -152,7 +164,22 @@ li {
 }
 
 .menucategory {
-  color:rgb(104, 21, 21);
+  color:black;
+}
+
+.menukey {
+  font-size:16px;
+  align-self:flex-end;
+  border: var(--logo-color);
+  border-width: 1px;
+  border-style:dashed;
+  padding:5px;
+  /* background-color: rgb(236, 245, 249); */
+}
+
+.keyrow {
+  padding:4px;
+  margin:0px;
 }
 
 .footerbox {
@@ -169,57 +196,21 @@ li {
   padding: 20px 30px 20px 30px;
 }
 
-
-
-/* .footergrid {
-  display:grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 3ch max-content;
-}
-
-.footerhourstitle {
-  grid-column: 1 /2;
-  grid-row: 1 /2 ;
-}
-
-.footerhoursdescription {
-  grid-column: 1 / 2;
-  grid-row: 2 /3 ;
-}
-
-.footeraddresstitle {
-  grid-column: 2 / 3;
-  grid-row: 1 /2 ;
-}
-
-.footeraddressdescription {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3 ;
-}
-
-.footercontacttitle {
-  grid-column: 3 / 4;
-  grid-row: 1 /2 ;
-}
-
-.footercontactdescription {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3 ;
-} */
-
 .footertitle {
   text-decoration: underline;
   align-self:flex-start;
+  margin-bottom:8px;
 }
 
 .footerdescription {
   align-self:flex-start;
+
+  margin-bottom:4px;
 }
 
 .footertitle, .footerdescription {
   color:red;
   font-size: 16px;
-  padding:5px;
 }
 
 a {
@@ -228,7 +219,7 @@ a {
 }
 
 .selected {
-  text-decoration: rgb(246, 118, 27) wavy underline;
+  text-decoration: var(--highlight-color) wavy underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
