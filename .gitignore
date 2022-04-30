@@ -1,3 +1,1 @@
-**/*.jpg
-!/src/*.jpg
 node_modules/
