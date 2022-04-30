@@ -169,6 +169,8 @@ li {
   padding: 20px 30px 20px 30px;
 }
 
+
+
 /* .footergrid {
   display:grid;
   grid-template-columns: 1fr 1fr 2fr;
@@ -206,19 +208,17 @@ li {
 } */
 
 .footertitle {
-  color:red;
   text-decoration: underline;
-  font-size:16px;
-  align-self:center;
+  align-self:flex-start;
 }
 
 .footerdescription {
-  color:red;
-  align-self:initial;
-  font-size:16px;
+  align-self:flex-start;
 }
 
 .footertitle, .footerdescription {
+  color:red;
+  font-size: 16px;
   padding:5px;
 }
 
@@ -228,6 +228,14 @@ a {
 }
 
 .selected {
-  text-decoration: black wavy underline;
+  text-decoration: rgb(246, 118, 27) wavy underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
+
+.footercolumn {
+  display: flex;
+  flex-direction: column;
+  align-self:flex-start;
+}

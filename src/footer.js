@@ -5,10 +5,15 @@ function footer() {
 
   const footerhours = document.createElement('div');
   footerhours.classList.add('footerhours');
+  footerhours.classList.add('footercolumn');
+
   const footeraddress = document.createElement('div');
   footeraddress.classList.add('footeraddress');
+  footeraddress.classList.add('footercolumn');
+
   const footercontact = document.createElement('div');
   footercontact.classList.add('footercontact');
+  footercontact.classList.add('footercolumn');
 
   // const footergrid = document.createElement('div');
   // footergrid.classList.add('footergrid');
@@ -19,15 +24,19 @@ function footer() {
 
   const footerhoursdescription = document.createElement('div');
   footerhoursdescription.classList.add('footerhoursdescription', 'footerdescription');
-  footerhoursdescription.innerHTML = ('M-F: 12pm - 8pm');
+  footerhoursdescription.innerHTML = ('M-F: 7:30am - 8pm');
 
   const footeraddresstitle = document.createElement('div');
   footeraddresstitle.classList.add('footeraddresstitle', 'footertitle');
   footeraddresstitle.innerHTML = ('Address');
 
-  const footeraddressdescription = document.createElement('div');
-  footeraddressdescription.classList.add('footeraddressdescription', 'footerdescription');
-  footeraddressdescription.innerHTML = ('123 Colorado Blvd');
+  const footeraddressdescription1 = document.createElement('div');
+  footeraddressdescription1.classList.add('footeraddressdescription', 'footerdescription');
+  footeraddressdescription1.innerHTML = ('123 Colorado Blvd');
+
+  const footeraddressdescription2 = document.createElement('div');
+  footeraddressdescription2.classList.add('footeraddressdescription', 'footerdescription');
+  footeraddressdescription2.innerHTML = ('Sierra Madre, CA 11223');
 
   const footercontacttitle = document.createElement('div');
   footercontacttitle.classList.add('footercontacttitle', 'footertitle');
@@ -49,7 +58,8 @@ function footer() {
   footerhours.appendChild(footerhourstitle);
   footerhours.appendChild(footerhoursdescription);
   footeraddress.appendChild(footeraddresstitle)
-  footeraddress.appendChild(footeraddressdescription)
+  footeraddress.appendChild(footeraddressdescription1)
+  footeraddress.appendChild(footeraddressdescription2)
   footercontact.appendChild(footercontacttitle)
   footercontact.appendChild(footercontactdescription)
 
