@@ -9,7 +9,7 @@ function nav() {
 
   const aboutnav = document.createElement('li');
   aboutnav.classList.add('nav__item');
-  aboutnav.innerHTML = '<a>about</a>';
+  aboutnav.innerHTML = 'about';
   aboutnav.id = 'aboutnav';
 
   const menunav = document.createElement('li');
