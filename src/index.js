@@ -16,14 +16,16 @@ navlist.addEventListener("click", function(event) {
   const content = document.getElementById('content');
   const footerbox = document.getElementById('footerbox');
   const oldChild = document.querySelector('.sectionbox');
-  content.removeChild(oldChild);
+  // content.removeChild(oldChild);
 
   if (tab === 'about') {
+    content.removeChild(oldChild);
     content.insertBefore(about(), footerbox);
   } else if (tab === 'menu') {
+    content.removeChild(oldChild);
     content.insertBefore(menu(), footerbox);
-  } else if (tab === 'contact') {
-    content.insertBefore(contact(), footerbox);
+  // } else if (tab === 'contact') {
+  //   content.insertBefore(contact(), footerbox);
   }
 });
 

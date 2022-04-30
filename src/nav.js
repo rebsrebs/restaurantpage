@@ -19,8 +19,13 @@ function nav() {
 
   const contactnav = document.createElement('li');
   contactnav.classList.add('nav__item');
-  contactnav.textContent = 'contact';
+  // contactnav.textContent = 'contact';
   contactnav.id = 'contactnav';
+
+  const aTag = document.createElement('a');
+  aTag.setAttribute('href',"#footerbox");
+  aTag.innerText = "contact";
+  contactnav.appendChild(aTag);
 
   navList.appendChild(aboutnav);
   navList.appendChild(menunav);

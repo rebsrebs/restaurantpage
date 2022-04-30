@@ -86,11 +86,12 @@ body {
   border-width:1px;
   border-style:solid;
   padding:30px;
-  width:700px;
+  width:760px;
   align-items:center;
   justify-content:center;
   margin-top:10px;
   margin-bottom:10px;
+  box-sizing:border-box;
 }
 
 .menuitem {
@@ -141,6 +142,10 @@ h3 {
   font-size:25px;
 }
 
+li {
+  cursor: pointer;
+}
+
 .menusection {
   font-family:Monoton;
   color:rgb(230, 58, 181);
@@ -150,9 +155,23 @@ h3 {
   color:rgb(104, 21, 21);
 }
 
-.footergrid {
+.footerbox {
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  border-color:rgb(114, 232, 114);
+  border-width:1px;
+  border-style:solid;
+  width:760px;
+  margin-top:10px;
+  margin-bottom:10px;
+  box-sizing:border-box;
+  padding: 20px 30px 20px 30px;
+}
+
+/* .footergrid {
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: 3ch max-content;
 }
 
@@ -184,11 +203,12 @@ h3 {
 .footercontactdescription {
   grid-column: 3 / 4;
   grid-row: 2 / 3 ;
-}
+} */
 
 .footertitle {
-  color:blue;
-  font-size:20px;
+  color:red;
+  text-decoration: underline;
+  font-size:16px;
   align-self:center;
 }
 
@@ -200,5 +220,14 @@ h3 {
 
 .footertitle, .footerdescription {
   padding:5px;
+}
+
+a {
+  text-decoration:none;
+  color:inherit;
+}
+
+.selected {
+  text-decoration: black wavy underline;
 }
 

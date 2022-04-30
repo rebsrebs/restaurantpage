@@ -1,10 +1,17 @@
 function footer() {
   const footerbox = document.createElement('div');
-  footerbox.classList.add('sectionbox');
+  footerbox.classList.add('footerbox');
   footerbox.id = 'footerbox';
 
-  const footergrid = document.createElement('div');
-  footergrid.classList.add('footergrid');
+  const footerhours = document.createElement('div');
+  footerhours.classList.add('footerhours');
+  const footeraddress = document.createElement('div');
+  footeraddress.classList.add('footeraddress');
+  const footercontact = document.createElement('div');
+  footercontact.classList.add('footercontact');
+
+  // const footergrid = document.createElement('div');
+  // footergrid.classList.add('footergrid');
 
   const footerhourstitle = document.createElement('div');
   footerhourstitle.classList.add('footerhourstitle', 'footertitle');
@@ -30,14 +37,27 @@ function footer() {
   footercontactdescription.classList.add('footercontactdescription', 'footerdescription');
   footercontactdescription.innerHTML = ('thepickle @ thepickle dot com');
 
-  footergrid.appendChild(footerhourstitle);
-  footergrid.appendChild(footerhoursdescription);
-  footergrid.appendChild(footeraddresstitle);
-  footergrid.appendChild(footeraddressdescription);
-  footergrid.appendChild(footercontacttitle);
-  footergrid.appendChild(footercontactdescription);
+  // footergrid.appendChild(footerhourstitle);
+  // footergrid.appendChild(footerhoursdescription);
+  // footergrid.appendChild(footeraddresstitle);
+  // footergrid.appendChild(footeraddressdescription);
+  // footergrid.appendChild(footercontacttitle);
+  // footergrid.appendChild(footercontactdescription);
 
-  footerbox.appendChild(footergrid);
+  // footerbox.appendChild(footergrid);
+
+  footerhours.appendChild(footerhourstitle);
+  footerhours.appendChild(footerhoursdescription);
+  footeraddress.appendChild(footeraddresstitle)
+  footeraddress.appendChild(footeraddressdescription)
+  footercontact.appendChild(footercontacttitle)
+  footercontact.appendChild(footercontactdescription)
+
+  footerbox.appendChild(footerhours);
+  footerbox.appendChild(footeraddress);
+  footerbox.appendChild(footercontact);
+  
+
 
   return footerbox;
 }
