@@ -1,4 +1,5 @@
-import Icon from './icon.png';
+// import Icon from './icon.png';
+import Pickles from './pickles.jpg';
 
 function about() {
   const aboutbox = document.createElement('div');
@@ -15,12 +16,16 @@ function about() {
   paragraph2.classList.add('aboutp');
 
   // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
-  myIcon.classList.add('imageblock');
+  // const myIcon = new Image();
+  // myIcon.src = Icon;
+  // myIcon.classList.add('imageblock');
+
+  const myPickles = new Image();
+  myPickles.src = Pickles;
+  myPickles.classList.add('imageblock');
 
   aboutbox.appendChild(paragraph1);
-  aboutbox.appendChild(myIcon);
+  aboutbox.appendChild(myPickles);
   aboutbox.appendChild(paragraph2);
  
 
